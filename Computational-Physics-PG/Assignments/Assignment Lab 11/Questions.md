@@ -52,10 +52,11 @@ and,
 `  ⎢−2⎥` 
 `  ⎣ 1⎦`
 
-# Question 3
-Solve the previous problem using **LU Decomposition**.
+- using **Gaussian Elimination**
 
-# Question 4
+- using **LU Decomposition**.
+
+# Question 3
 **LU Decomposition and determinant of a matrix**
 
 Solve the equation `AX=V` by LU decompositon method, where
