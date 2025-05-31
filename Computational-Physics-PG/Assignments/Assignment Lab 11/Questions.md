@@ -13,9 +13,9 @@ good answers by using a large but finite interval. Try using `x=−10a` to `+10a
 walls.) The wavefunction is real everywhere, so you don't need to use complex variables, and you can use
 evenly spaced points for the solution - there is no need to use an adaptive method for this problem.
 
-The quantum harmonic oscillator is known to have energy states that are equally spaced. Check that this
-is true, to the precision of your calculation, for your answers. (Hint: The ground state has energy in the
-range 100 to 200 eV.)
+ The quantum harmonic oscillator is known to have energy states that are equally spaced. Check that this
+ is true, to the precision of your calculation, for your answers. (Hint: The ground state has energy in the
+ range 100 to 200 eV.)
 
 2. Now modify your program to calculate the same three energies for the anharmonic oscillator with
 `V(x)=V₀x⁴/a⁴`, with the same parameter values. Also calculate the properly normalized wavefunctions of the anharmonic
@@ -70,7 +70,7 @@ and
 
 and compute determinant of the matrix `A`. 
 
-**Hints:** Determinant of a matrix is determined by the product of diagonal element of upper triangular matrix `U` after LU decomposition.
+**Hints :** Determinant of a matrix is determined by the product of diagonal element of upper triangular matrix `U` after LU decomposition.
 
 # Question 4
 **Coupled Mass-Spring System**
@@ -114,4 +114,4 @@ These equations can be rearranged to read:
 where `α=2k-mω²`.
 
 This is precisely a tridiagonal set of simultaneous equations.
-Solve these system of equations using gaussian Elimination and plot the amplitude of vibrations of the atoms along the length of the solid
+Solve these system of equations using gaussian Elimination and plot the amplitude of vibrations of the atoms along the length of the solid.
