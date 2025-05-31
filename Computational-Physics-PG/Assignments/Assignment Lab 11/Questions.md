@@ -53,7 +53,7 @@ and,
 `  ⎣ 1⎦`
 
 # Question 3
-Solve the previous problem using **LU Decomposition**
+Solve the previous problem using **LU Decomposition**.
 
 # Question 4
 **LU Decomposition and determinant of a matrix**
