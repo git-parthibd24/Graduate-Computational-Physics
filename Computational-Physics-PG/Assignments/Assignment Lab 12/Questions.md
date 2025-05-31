@@ -3,7 +3,7 @@
 
 Use the **Gauss–Seidel method** to solve **Laplace’s equation** for the two-dimensional problem :
 
-- A square box 1 m on each side.
+- A square box `1 m` on each side.
 - Voltage `V=1` volt along the top wall.
 - Voltage `V=0` volts along the other three walls.
 
