@@ -1,14 +1,14 @@
-#Fourier series for square waveform using quad() in [-pi, pi] interval
+#Fourier series for sawtooth waveform using quad() in [-pi,pi] interval
 
 import matplotlib.pyplot as plt
-from scipy.signal import square
+from scipy.signal import sawtooth
 from scipy.integrate import quad
 import numpy as np
 
-#Defining the square wave function
-L=eval(input('Enter the period of the square wave : '))
+#Defining the sawtooth wave function
+L=eval(input('Enter the period of the sawtooth wave : '))
 m=2*np.pi/L                                              #Periodicity of the function 
-y=lambda x: square(m*x)
+y=lambda x: sawtooth(m*x)
 
 #Display limits
 L1=eval(input('Enter lower limit of display : '))
@@ -17,23 +17,23 @@ x=np.linspace(L1,L2,10000)                               #This is the region whe
 xs=np.linspace(-L/2,L/2,10000)                           #This is the region (1 period) to display the original function 	
 
 #Fourier wave parameters
-f=lambda x: square(m*x)
-fc=lambda x: square(m*x)*np.cos(i*x)
-fs=lambda x: square(m*x)*np.sin(i*x)
+f=lambda x: sawtooth(m*x)
+fc=lambda x: sawtooth(m*x)*np.cos(i*x)
+fs=lambda x: sawtooth(m*x)*np.sin(i*x)
 
 #Evaluation of coefficients
 n=100                                     #No. of terms used for the series
 
-a0=2/(2*np.pi)*quad(f,-np.pi,np.pi)[0]
+a0=2/(2*np.pi)*quad(f,-np.pi,np.pi,limit=200)[0]
 
 Ai=[]
 for i in range(n):
-	ai=2/(2*np.pi)*quad(fc,-np.pi,np.pi)[0]
+	ai=2/(2*np.pi)*quad(fc,-np.pi,np.pi,limit=200)[0]
 	Ai.append(ai)
 
 Bi=[]
 for i in range(n):
-	bi=2/(2*np.pi)*quad(fs,-np.pi,np.pi)[0]
+	bi=2/(2*np.pi)*quad(fs,-np.pi,np.pi,limit=200)[0]
 	Bi.append(bi)
 
 #Performing Fourier Series Sum		   
@@ -48,6 +48,6 @@ plt.plot(x,s,'-',color='green',linewidth='1.0',label='Fourier Series')
 plt.plot(xs,y(xs),'r--',label='Original Function')
 plt.axhline(color='gray',lw='1.0')
 plt.axvline(color='gray',lw='1.0')
-plt.title(r'Fourier Series for square waveform in [$-\pi$,$\pi$]')
+plt.title(r'Fourier Series for sawtooth waveform in [$-\pi$,$\pi$]')
 plt.legend(loc='best',prop={'size':7})
 plt.show()
