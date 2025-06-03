@@ -1,4 +1,5 @@
 #Auto detect text files and perform LF normalization
 * text=auto
+
 #Ignore html files in Github Language Stats
 *.html linguist-vendored
